@@ -56,8 +56,7 @@ ReactDom.render(
 			images={configLoader.images}
 			autoResolveDelay={3000}
 			resolveOnError={true}
-			mountChildren={true}
-		>
+			mountChildren={true}>
 			<App/>
 		</Preload>
 	</div>

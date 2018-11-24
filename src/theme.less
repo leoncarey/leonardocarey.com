@@ -18,6 +18,15 @@ html, body {
   position: relative;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: @white;
+  background: @brand-secondary;
+}
+::selection {
+  color: @white;
+  background: @brand-secondary;
+}
+
 /*
  * Type
  */
@@ -172,5 +181,11 @@ img {
     &:after {
       left: 0;
     }
+  }
+}
+
+@media screen and (min-width: @screen-lg-min) {
+  .container {
+    width: 1024px;
   }
 }
