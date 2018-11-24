@@ -1,0 +1,59 @@
+.transform(@value) {
+  -webkit-transform: @value;
+  transform: @value;
+}
+
+.transition(@value) {
+  -webkit-transition: @value;
+  -moz-transition: @value;
+  -ms-transition: @value;
+  -o-transition: @value;
+  transition: @value;
+}
+
+.translate(@value1, @value2) {
+  -webkit-transform: translate(@value1, @value2);
+  -moz-transform:    translate(@value1, @value2);
+  -ms-transform:     translate(@value1, @value2);
+  -o-transform:      translate(@value1, @value2);
+  transform:         translate(@value1, @value2);
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.box-shadow(@value) {
+  -webkit-box-shadow: @value;
+  -moz-box-shadow: @value;
+  box-shadow: @value;
+}
+
+.border-radius(@value) {
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -webkit-border-radius: @value;
+
+  /* Firefox 1-3.6 */
+  -moz-border-radius: @value;
+
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: @value;
+}
+
+.opacity(@value) {
+  opacity: @value;
+}
+
+.animation(@value) {
+  -webkit-animation: @value; /* Safari 4+ */
+  -moz-animation:    @value; /* Fx 5+ */
+  -o-animation:      @value; /* Opera 12+ */
+  animation:         @value; /* IE 10+, Fx 29+ */
+}

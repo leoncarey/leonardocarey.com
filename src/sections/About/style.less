@@ -1,0 +1,71 @@
+@import url(../../theme);
+
+.aboutWrapper {
+  padding-top: 94px;
+}
+
+.about {
+  margin: 100px 0;
+  .clearfix();
+
+  .contentAbout {
+    width: 65%;
+    float: left;
+  }
+
+  .description {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 60px 0 0;
+    font-family: @font-secondary;
+    font-size: 18px;
+    font-style: italic;
+    .clearfix();
+
+    > div:first-of-type {
+      text-align: right;
+
+      * {
+        font-weight: 600;
+        color: @generic-text;
+      }
+    }
+
+    > div:last-of-type {
+      * {
+        font-weight: 400;
+        color: @generic-quote;
+      }
+      strong {
+        font-weight: 600;
+        color: @generic-text;
+      }
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .quoteText {
+      display: block;
+
+      i {
+        color: @generic-subtext;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .pic {
+    margin-top: 40px;
+    width: 30%;
+    margin-left: 20px;
+    float: left;
+  }
+
+  .felix {
+    margin-top: 30px;
+    margin-right: 80px;
+    text-align: left;
+  }
+}

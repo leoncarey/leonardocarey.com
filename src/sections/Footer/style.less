@@ -1,0 +1,55 @@
+@import url(../../theme);
+
+.footer {
+  margin-top: 100px;
+  margin-bottom: 0;
+
+  .container {
+    border-top: 1px dashed @brand-primary;
+    padding-top: 40px;
+  }
+
+  .lionMGM {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h5 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .presents {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .socialFooter {
+    padding: 0;
+    margin: 20px 0 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+
+      &:not(:last-of-type) {
+        margin-right: 45px;
+      }
+    }
+
+    a {
+      display: block;
+      .transition(all .1s ease);
+      position: relative;
+      top: 0;
+
+      &:hover {
+        top: -2px;
+      }
+    }
+  }
+}

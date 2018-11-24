@@ -1,0 +1,489 @@
+@import url(../../theme);
+
+.ironManContainer {
+  background: @brand-tertiary url(../../assets/img/bg-portifolio.png) repeat;
+  margin: 0;
+  padding: 60px 0 120px;
+
+  .ironManInner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .ironMan {
+    width: 320px;
+    margin: 50px auto 0;
+    position: relative;
+    z-index: 499;
+    float: left;
+
+    .helmet {
+      width: 300px;
+      height: 555px;
+      margin: 0 auto;
+      position: relative;
+
+      * {
+        position: absolute;
+      }
+
+      .behindHelmet {
+        width: 326px;
+        height: 290px;
+        left: 50%;
+        margin-left: -164px;
+        top: 10px;
+        .border-radius(35% 35% 0 0);
+        background: @red-iron-shadow;
+      }
+
+      .topHelmet {
+        width: 300px;
+        height: 150px;
+        background: @red-iron;
+        .border-radius(80% 80% 0 0);
+
+        top: 0;
+        left: 50%;
+        margin-left: -150px;
+      }
+
+      .ears {
+        width: 356px;
+        height: 220px;
+        background: #AD262D;
+        top: 150px;
+        left: 50%;
+        margin-left: -178px;
+        .border-radius(40%);
+        .box-shadow(inset 7px 4px 0 @red-iron-shadow);
+      }
+
+      .chin {
+        width: 150px;
+        height: 30px;
+        background: @red-iron;
+        .border-radius(0 0 45% 45%);
+
+        bottom: 0;
+        left: 50%;
+        margin-left: -75px;
+      }
+
+      .cheeks {
+        width: 100%;
+        height: 100px;
+        bottom: 0;
+
+        .cheekLeft {
+          width: 50px;
+          height: 130px;
+          background: @red-iron;
+          .transform(rotate(-32deg));
+          .border-radius(10% 0 0 0);
+
+          bottom: 15px;
+          left: 37px;
+        }
+
+        .cheekRight {
+          width: 50px;
+          height: 130px;
+          background: @red-iron;
+          .transform(rotate(32deg));
+          .border-radius(0 10% 0 0);
+
+          bottom: 15px;
+          right: 37px;
+        }
+      }
+
+      .jaw {
+        width: 310px;
+        height: 400px;
+        background: @red-iron;
+        .border-radius(10px 10px 50% 50%);
+
+        bottom: 6px;
+        left: 50%;
+        margin-left: -155px;
+      }
+    }
+
+    .insideHelmet {
+      width: 220px;
+      height: 280px;
+      top: 190px;
+      left: 50%;
+      margin-left: -110px;
+      .border-radius(20%);
+      background: @red-iron-shadow;
+      overflow: hidden;
+      border: 4px solid @red-iron-shadow;
+
+      .face {
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/img/iron-mask.jpg) no-repeat -3px -40px;
+        background-size: 100%;
+        .box-shadow(inset 0 -10px 5px 10px @black);
+        .border-radius(60px 60px 50px 50px);
+      }
+    }
+
+    .mask {
+      width: 250px;
+      height: 400px;
+      top: 50px; /* closed state: 50px; opened state: -145px; */
+      left: 50%;
+      margin-left: -125px;
+      .transition(all 0.3s ease);
+
+      .topMask {
+        width: 280px;
+        height: 270px;
+        top: 0;
+        left: 50%;
+        margin-left: -140px;
+        .border-radius(30% 30% 90px 90px);
+        .box-shadow(inset 0 0 0 0 @yellow-iron-shadow);
+
+        .sideLeft {
+          width: 77px;
+          height: 231px;
+          top: 1px;
+          left: 4px;
+          .border-radius(90px 0 0 48px);
+          border-left: 3px solid @yellow-iron-shadow;
+          background: @yellow-iron;
+
+          &:after {
+            content: ' ';
+            position: absolute;
+            width: 31px;
+            height: 140px;
+            top: 0;
+            right: -20px;
+            background: @yellow-iron;
+            .transform(skew(6deg,-8deg));
+          }
+        }
+        .sideRight {
+          width: 77px;
+          height: 231px;
+          top: 1px;
+          right: 4px;
+          .border-radius(0 90px 48px 0);
+          border-right: 3px solid @yellow-iron-shadow;
+          background: @yellow-iron;
+
+          &:after {
+            content: ' ';
+            position: absolute;
+            width: 31px;
+            height: 140px;
+            top: 0;
+            left: -20px;
+            background: @yellow-iron;
+            .transform(skew(-6deg, 8deg));
+          }
+        }
+      }
+
+      .behindMask {
+        width: 300px;
+        height: 270px;
+        top: 114px;
+        left: 50%;
+        margin-left: -150px;
+        .border-radius(50%);
+        background: @yellow-iron-shadow;
+
+        .cheekLeftBehind {
+          width: 85px;
+          height: 190px;
+          background: @yellow-iron-shadow;
+          .transform(rotate(-20deg));
+          .border-radius(0 0 0 15px);
+          bottom: -50px;
+          left: 40px;
+        }
+        .cheekRightBehind {
+          width: 85px;
+          height: 190px;
+          background: @yellow-iron-shadow;
+          .transform(rotate(20deg));
+          .border-radius(0 0 15px 0);
+          bottom: -50px;
+          right: 40px;
+        }
+      }
+
+      .bottomMask {
+        width: 120px;
+        height: 310px;
+        bottom: -16px;
+        left: 50%;
+        margin-left: -60px;
+        background: @yellow-iron;
+      }
+
+      .cheeksMask {
+        width: 100%;
+        height: 100px;
+        bottom: 0;
+
+        .cheekLeft {
+          width: 60px;
+          height: 190px;
+          background: @yellow-iron;
+          .transform(rotate(-20deg));
+
+          bottom: -11px;
+          left: 30px;
+        }
+
+        .cheekRight {
+          width: 60px;
+          height: 190px;
+          background: @yellow-iron;
+          .transform(rotate(20deg));
+
+          bottom: -11px;
+          right: 30px;
+        }
+      }
+
+      .eyebrows {
+        width: 250px;
+        height: 25px;
+        left: 50%;
+        top: 222px;
+        margin-left: -125px;
+        background: @black-iron;
+        .border-radius(0 0 90% 90%);
+
+        &:before {
+          content: ' ';
+          position: absolute;
+          width: 100%;
+          height: 53px;
+          z-index: 0;
+          top: -32px;
+          left: 0px;
+          background: @yellow-iron;
+          .border-radius(50%);
+        }
+      }
+
+      .eyes {
+        width: 250px;
+        height: 20px;
+        left: 50%;
+        top: 222px;
+        margin-left: -125px;
+      }
+
+      .leftEye {
+        width: 100px;
+        height: 45px;
+        top: 0;
+        left: -5px;
+        background: @black-iron;
+        .border-radius(15px 10px 45px 30px);
+        .transform(rotate(7deg));
+
+        .lightEye {
+          width: 82%;
+          height: 38px;
+          background: @lights;
+          top: -1px;
+          left: 8px;
+          .border-radius(10px 22px 29px 35px);
+          .transform(rotate(-2deg));
+        }
+      }
+      .rightEye {
+        width: 100px;
+        height: 45px;
+        top: 0;
+        right: -5px;
+        background: @black-iron;
+        .border-radius(15px 15px 35px 40px);
+        .transform(rotate(-7deg));
+
+        .lightEye {
+          width: 82%;
+          height: 38px;
+          background: @lights;
+          top: -1px;
+          right: 9px;
+          .border-radius(22px 10px 35px 29px);
+          .transform(rotate(2deg));
+        }
+      }
+
+      .gap {
+        width: 70px;
+        height: 130px;
+        top: -3px;
+        left: 50%;
+        margin-left: -35px;
+        background: @red-iron;
+        .border-radius(0 0 15px 15px);
+
+        .sideLeft {
+          width: 60px;
+          height: 125px;
+          top: 0;
+          left: 50%;
+          margin-left: -45px;
+          background: @red-iron;
+          .transform(skew(9deg, 9deg));
+          .border-radius(0 0 5px 5px);
+        }
+        .sideRight {
+          width: 60px;
+          height: 125px;
+          top: 0;
+          right: 50%;
+          margin-right: -45px;
+          background: @red-iron;
+          .transform(skew(-9deg, -9deg));
+          .border-radius(0 0 5px 5px);
+        }
+      }
+    }
+
+    .chinMask {
+      position: absolute;
+      width: 110px;
+      height: 45px;
+      bottom: 44px;
+      left: 50%;
+      margin-left: -55px;
+      background: @yellow-iron;
+      border-top: 5px solid @yellow-iron-shadow;
+
+      .sideLeft {
+        width: 35px;
+        height: 28px;
+        bottom: 0;
+        left: -34px;
+        background: @yellow-iron;
+        .transform(skew(-23deg, 50deg));
+        border-top: 10px solid @yellow-iron-shadow;
+      }
+      .cornerLeft {
+        width: 24px;
+        height: 38px;
+        bottom: -9px;
+        left: -15px;
+        background: @yellow-iron;
+        .transform(skew(24deg, -44deg));
+      }
+      .sideRight {
+        width: 35px;
+        height: 28px;
+        bottom: 0;
+        right: -34px;
+        background: @yellow-iron;
+        .transform(skew(23deg, -50deg));
+        border-top: 10px solid @yellow-iron-shadow;
+      }
+      .cornerRight {
+        width: 24px;
+        height: 38px;
+        bottom: -9px;
+        right: -15px;
+        background: @yellow-iron;
+        .transform(skew(-24deg, 44deg));
+      }
+    }
+
+    &.opened {
+      .mask {
+        top: -145px;
+      }
+    }
+
+    .talkBalloon {
+      width: 160px;
+      height: 100px;
+      text-align: center;
+      display: table;
+      background: @white;
+      position: absolute;
+      top: 200px;
+      right: -140px;
+      border: 2px solid @black;
+      .border-radius(50%);
+      line-height: 15px;
+
+      span {
+        display: table-cell;
+        vertical-align: middle;
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      &:after {
+        content: ' ';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 1px;
+        bottom: 9px;
+        background: @white;
+        border-bottom: 2px solid @black;
+        border-left: 2px solid @black;
+      }
+    }
+
+    @media (max-width: @screen-xs-max) {
+      width: 280px;
+      margin: 100px auto 0;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      .talkBalloon {
+        right: -60px;
+        top: 0;
+      }
+    }
+  }
+
+  .sideInfo {
+    width: 40%;
+    height: 250px;
+    margin: 30px 6% 0 10%;
+    align-items: center;
+    justify-content: center;
+    background: @white;
+    padding: 40px 30px 20px;
+    border: 2px solid @brand-primary;
+
+    .title {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    .subTitle {
+      font-size: 30px;
+      margin: 0;
+    }
+
+    .emoji {
+      color: #ee0000;
+    }
+
+    p {
+      font-size: 14px;
+
+      &:first-of-type {
+        margin-top: 25px;
+      }
+    }
+  }
+}
