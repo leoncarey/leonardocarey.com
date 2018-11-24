@@ -43,7 +43,7 @@
     a {
       display: block;
       width: 40px;
-      height: 26px;
+      height: 40px;
       padding-top: 14px;
       background: @brand-primary;
       text-align: center;
@@ -54,6 +54,7 @@
 
       span {
         color: @white;
+        font-weight: 300;
       }
 
       .onPlay {
@@ -163,7 +164,56 @@
     .transition(opacity .4s ease);
 
     &.clicked {
-      .opacity(0)
+      .opacity(0);
+    }
+  }
+
+  @media screen and (max-width: @screen-sm-max) {
+    top: 0;
+    right: auto;
+    left: -70px;
+    position: relative;
+    margin: 0 auto;
+
+    .notes {
+      top: 20px;
+
+      a {
+        &:nth-child(1) {
+          right: -30px;
+        }
+        &:nth-child(2) {
+          right: -40px;
+        }
+        &:nth-child(3) {
+          right: -50px;
+        }
+        &:nth-child(4) {
+          right: -60px;
+        }
+        &:nth-child(5) {
+          right: -30px;
+        }
+        &:nth-child(6) {
+          right: -40px;
+        }
+        &:nth-child(7) {
+          right: -50px;
+        }
+        &:nth-child(8) {
+          right: -60px;
+        }
+        &:nth-child(9) {
+          right: -70px;
+        }
+        &:nth-child(10) {
+          right: -80px;
+        }
+      }
+    }
+
+    .clickText {
+      display: none;
     }
   }
 }

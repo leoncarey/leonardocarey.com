@@ -15,7 +15,7 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 20px;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
     border-right: 1px solid @brand-primary;
 
     a {
@@ -200,6 +200,33 @@
         font-size: 18px;
         font-weight: 300;
         color: @generic-subtext;
+      }
+    }
+  }
+
+  @media screen and (max-width: @screen-sm-max) {
+    position: relative;
+    height: auto;
+    padding-bottom: 20px;
+
+    .headerTop {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .innerHeader {
+      height: auto;
+      text-align: center;
+      display: block;
+
+      .logo {
+        display: block;
+        margin: 0 auto;
+      }
+      .menu {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
       }
     }
   }

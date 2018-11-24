@@ -7,9 +7,15 @@
 html, body, * {
   font-weight: 300;
   color: @generic-text;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 html, body {
   font-family: @font-primary;
+  width: 100%;
+  position: relative;
 }
 
 /*
@@ -72,6 +78,14 @@ p {
   margin: 0 auto;
   padding-right: 0;
   padding-left: 0;
+  clear: both;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
 }
 
 .clearfix {
@@ -129,5 +143,34 @@ img {
     display: block;
     border-left: 2px solid @brand-primary;
     border-right: 2px solid @brand-primary;
+  }
+}
+
+@media screen and (max-width: @screen-sm-max) {
+  .container {
+    width: 100%;
+  }
+
+  .halfSide {
+    width: 100%;
+    float: none;
+    display: block;
+
+    .innerHalf {
+      padding: 0 10px;
+    }
+  }
+
+  .generalTitle {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .generalSubTitle {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:after {
+      left: 0;
+    }
   }
 }

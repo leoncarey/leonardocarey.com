@@ -9,14 +9,14 @@
   .clearfix();
 
   .contentAbout {
-    width: 65%;
+    width: 63%;
     float: left;
   }
 
   .description {
     width: 100%;
     margin-top: 30px;
-    padding: 0 60px 0 0;
+    padding: 0;
     font-family: @font-secondary;
     font-size: 18px;
     font-style: italic;
@@ -44,6 +44,7 @@
 
     p {
       font-size: 16px;
+      line-height: 20px;
     }
 
     .quoteText {
@@ -54,11 +55,15 @@
         font-weight: 600;
       }
     }
+
+    .genericSubtitle {
+      margin-top: 0;
+    }
   }
 
   .pic {
     margin-top: 40px;
-    width: 30%;
+    width: 32%;
     margin-left: 20px;
     float: left;
   }
@@ -67,5 +72,29 @@
     margin-top: 30px;
     margin-right: 80px;
     text-align: left;
+  }
+}
+
+@media screen and (max-width: @screen-sm-max) {
+  .aboutWrapper {
+    padding: 0;
+  }
+  .about {
+    margin-top: 20px;
+
+    .contentAbout {
+      width: 100%;
+    }
+
+    .description {
+      div {
+        text-align: left !important;
+      }
+    }
+
+    .pic {
+      width: 80%;
+      margin-top: 20px;
+    }
   }
 }

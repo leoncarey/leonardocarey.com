@@ -23,16 +23,23 @@ class About extends React.Component {
 								<div className={style.description}>
 									<div className={style.halfSide}>
 										<div className={style.innerHalf}>
-											I am 29 years old, married with Gaby and live in Porto Alegre. I'm a web developer
-											FullStack (But better as front-end).<br/>
-											I know play electric guitar and many instruments. I'm christian and devotee to God.
+											<h4 className={style.genericSubtitle}>Personal</h4>
+											<p>
+												I am 29 years old, married with Gaby and live in Porto Alegre. I'm a web
+												developer
+												FullStack (But better as front-end).<br/>
+												I know play electric guitar and many instruments. I'm christian and
+												devotee to God.
+											</p>
 										</div>
 									</div>
 
 									<div className={style.halfSide}>
 										<div className={style.innerHalf}>
+											<h4 className={style.genericSubtitle}>Professional</h4>
 											<p>
-												Today, I work as a fullStack developer at <a href="http://base.digital" target="_blank">BASE</a>.
+												Today, I work as a fullStack developer at <a href="http://base.digital"
+																							 target="_blank">BASE</a>.
 												Usually, I'm better with frontend than backend, but I build both.<br/>
 											</p>
 

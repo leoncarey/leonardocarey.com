@@ -440,24 +440,11 @@
         border-left: 2px solid @black;
       }
     }
-
-    @media (max-width: @screen-xs-max) {
-      width: 280px;
-      margin: 100px auto 0;
-    }
-
-    @media (max-width: @screen-sm-max) {
-      .talkBalloon {
-        right: -60px;
-        top: 0;
-      }
-    }
   }
 
   .sideInfo {
     width: 40%;
-    height: 250px;
-    margin: 30px 6% 0 10%;
+    margin: 80px 6% 0 10%;
     align-items: center;
     justify-content: center;
     background: @white;
@@ -470,7 +457,7 @@
     }
 
     .subTitle {
-      font-size: 30px;
+      font-size: 28px;
       margin: 0;
     }
 
@@ -484,6 +471,30 @@
       &:first-of-type {
         margin-top: 25px;
       }
+    }
+  }
+
+  @media screen and (max-width: @screen-sm-max) {
+    padding: 20px 10px 40px;
+
+    .ironManInner {
+      display: block;
+    }
+
+    .ironMan {
+      float: none;
+      margin-top: 20px;
+      margin-left: -60px;
+
+      .talkBalloon {
+        right: -100px;
+        top: 0;
+      }
+    }
+
+    .sideInfo {
+      width: 100%;
+      margin: 20px 0 0;
     }
   }
 }
