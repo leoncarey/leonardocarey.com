@@ -1,0 +1,254 @@
+@import "../../theme";
+
+.skills {
+  width: 100%;
+  height: 780px;
+  padding: 200px 0;
+  background: url(../../assets/img/skills/bg-skills.png) no-repeat center bottom;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  h4 {
+    color: @white;
+    text-align: center;
+    font-size: 48px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .astronaut {
+    position: absolute;
+    bottom: 10px;
+    right: 15%;
+    display: block;
+    width: 100px;
+    height: 153px;
+    -webkit-animation: moveAstronaut 3s infinite;
+    -o-animation: moveAstronaut 3s infinite;
+    animation: moveAstronaut 3s infinite;
+    z-index: 42;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url(../../assets/img/skills/astronalt.png) no-repeat center;
+      background-size: cover;
+      z-index: 2;
+    }
+  }
+  .shadowAstronaut {
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    right: 15%;
+    width: 90px;
+    height: 10px;
+    z-index: 41;
+    background: @shadows;
+    .border-radius(50%);
+    -webkit-animation: shadowAstronautChange 3s infinite;
+    -o-animation: shadowAstronautChange 3s infinite;
+    animation: shadowAstronautChange 3s infinite;
+  }
+
+  .station_1 {
+    position: absolute;
+    bottom: 90px;
+    right: 33%;
+    display: block;
+    width: 100px;
+    height: 163px;
+    background: url(../../assets/img/skills/station-1.png) no-repeat center;
+    background-size: cover;
+  }
+  .station_2 {
+    position: absolute;
+    bottom: 100px;
+    left: 200px;
+    display: block;
+    width: 200px;
+    height: 186px;
+    background: url(../../assets/img/skills/station-2.png) no-repeat center;
+    background-size: cover;
+  }
+  .station_3 {
+    position: absolute;
+    bottom: 90px;
+    right: 40%;
+    display: block;
+    width: 100px;
+    height: 88px;
+    background: url(../../assets/img/skills/station-3.png) no-repeat center;
+    background-size: cover;
+  }
+  .station_4 {
+    position: absolute;
+    bottom: 90px;
+    left: -60px;
+    display: block;
+    width: 300px;
+    height: 282px;
+    background: url(../../assets/img/skills/station-4.png) no-repeat center;
+    background-size: cover;
+  }
+
+  .craft_1 {
+    position: absolute;
+    bottom: 40px;
+    right: 8%;
+    display: block;
+    width: 216px;
+    height: 354px;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url(../../assets/img/skills/crafy-1.png) no-repeat center;
+      background-size: cover;
+      z-index: 2;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 4px;
+      width: 90%;
+      height: 20px;
+      z-index: 1;
+      background: @shadows;
+      .border-radius(50%);
+    }
+  }
+  .craft_2 {
+    position: absolute;
+    bottom: 40px;
+    left: 30%;
+    display: block;
+    width: 218px;
+    height: 232px;
+    -webkit-animation: moveTank 1s infinite;
+    -o-animation: moveTank 1s infinite;
+    animation: moveTank 1s infinite;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url(../../assets/img/skills/crafy-2.png) no-repeat center;
+      background-size: 100%;
+      z-index: 2;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: -2px;
+      left: 10px;
+      width: 90%;
+      height: 20px;
+      z-index: 1;
+      background: @shadows;
+      .border-radius(50%);
+    }
+  }
+
+  .rock_1 {
+    position: absolute;
+    bottom: 20px;
+    right: 24%;
+    display: block;
+    width: 150px;
+    height: 80px;
+    background: url(../../assets/img/skills/rock-1.png) no-repeat center;
+    background-size: cover;
+  }
+  .rock_2 {
+    position: absolute;
+    bottom: -10px;
+    left: -70px;
+    display: block;
+    width: 200px;
+    height: 100px;
+    background: url(../../assets/img/skills/rock-2.png) no-repeat center;
+    background-size: cover;
+  }
+  .rock_3 {
+    position: absolute;
+    bottom: 30px;
+    left: -60px;
+    display: block;
+    width: 240px;
+    height: 150px;
+    background: url(../../assets/img/skills/rock-3.png) no-repeat center;
+    background-size: cover;
+  }
+  .rock_4 {
+    position: absolute;
+    bottom: -20px;
+    right: -120px;
+    display: block;
+    width: 350px;
+    height: 250px;
+    background: url(../../assets/img/skills/rock-4.png) no-repeat center;
+    background-size: cover;
+    z-index: 2;
+  }
+  .rock_5 {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    display: block;
+    width: 282px;
+    height: 220px;
+    background: url(../../assets/img/skills/rock-5.png) no-repeat center;
+    background-size: cover;
+  }
+}
+
+@keyframes moveAstronaut {
+  0% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+@keyframes shadowAstronautChange {
+  0% {
+    width: 90px;
+    right: 15%;
+  }
+  50% {
+    width: 30px;
+    right: 17.5%;
+  }
+  100% {
+    width: 90px;
+    right: 15%;
+  }
+}
+
+@keyframes moveTank {
+  0% {
+    .transform(rotate(0deg));
+  }
+  50% {
+    .transform(rotate(-1deg));
+  }
+  100% {
+    .transform(rotate(0deg));
+  }
+}

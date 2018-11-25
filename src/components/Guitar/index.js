@@ -25,6 +25,9 @@ const sounds = [
 	sound_7, sound_8,
 	sound_9, sound_10
 ];
+/*
+ * Import Sounds ends
+ */
 
 
 class Guitar extends React.Component {
